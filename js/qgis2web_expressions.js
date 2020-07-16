@@ -754,3 +754,56 @@ function fnc__specialcol_(values, context) {
 function fnc_project_color(values, context) {
     return false;
 };
+
+
+
+function exp_PREFECTURE_SOUSPREFECT_6rule0_eval_expression(context) {
+    // STATUT = 'Préfecture de région'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['STATUT']  == 'Préfecture de région');
+    } else {
+        return (feature['STATUT']  == 'Préfecture de région');
+    }
+}
+
+
+function exp_PREFECTURE_SOUSPREFECT_6rule1_eval_expression(context) {
+    // STATUT = 'Préfectures'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['STATUT']  == 'Préfectures');
+    } else {
+        return (feature['STATUT']  == 'Préfectures');
+    }
+}
+
+
+function exp_PREFECTURE_SOUSPREFECT_6rule2_eval_expression(context) {
+    // STATUT = 'Sous-préfecture'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['STATUT']  == 'Sous-préfecture');
+    } else {
+        return (feature['STATUT']  == 'Sous-préfecture');
+    }
+}
+
+
+function exp_PREFECTURE_SOUSPREFECT_6rule3_eval_expression(context) {
+    // STATUT = 'Commune simple'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['STATUT']  == 'Commune simple');
+    } else {
+        return (feature['STATUT']  == 'Commune simple');
+    }
+}

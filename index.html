@@ -50,11 +50,12 @@
     <script src="data/MaSocit_4.js"></script>
     <script src="data/LIMITESADMIN_5.js"></script>
     <script src="data/PREFECTURE_SOUSPREFECT_6.js"></script>
-    <script src="data/POINTS_DE_LIVRAISON_7.js"></script>
+    <script src="data/Ponts_Tunnels_7.js"></script>
+    <script src="data/POINTS_DE_LIVRAISON_8.js"></script>
     <script>
         var map = L.map('map', {
             zoomControl: true, maxZoom: 28, minZoom: 1
-        }).fitBounds([[42.75221925296896, -6.615815143171628], [51.96151866587079, 13.851905070643749]]);
+        }).fitBounds([[43.143592174415666, -4.178123667723982], [47.91737548127744, 5.040950792508445]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://www.cartogis.fr/" target="_blank">CARTOGIS</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org"></a>');
         var autolinker = new Autolinker({ truncate: { length: 30, location: 'smart' } });
@@ -129,7 +130,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(211,95,37,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '1':
@@ -144,7 +145,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(147,114,200,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '10':
@@ -159,7 +160,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(16,237,223,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '11':
@@ -174,7 +175,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(132,33,213,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '12':
@@ -189,7 +190,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(226,137,48,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '13':
@@ -204,7 +205,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(113,238,190,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '14':
@@ -219,7 +220,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(131,221,143,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '15':
@@ -234,7 +235,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(222,77,77,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '16':
@@ -249,7 +250,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(131,172,229,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '17':
@@ -264,7 +265,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(46,34,216,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '18':
@@ -279,7 +280,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(144,210,105,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '19':
@@ -294,7 +295,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(171,219,118,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '2':
@@ -309,7 +310,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(99,205,129,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '20':
@@ -324,7 +325,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(187,51,240,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '21':
@@ -339,7 +340,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(239,17,158,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '22':
@@ -354,7 +355,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(42,89,227,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '23':
@@ -369,7 +370,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(64,193,235,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '24':
@@ -384,7 +385,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(207,126,219,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '25':
@@ -399,7 +400,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(98,217,69,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '26':
@@ -414,7 +415,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(205,49,17,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '27':
@@ -429,7 +430,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(35,137,209,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '28':
@@ -444,7 +445,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(232,199,31,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '29':
@@ -459,7 +460,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(198,224,48,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '3':
@@ -474,7 +475,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(113,226,109,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '30':
@@ -489,7 +490,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(216,118,213,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '31':
@@ -504,7 +505,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(52,229,132,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '32':
@@ -519,7 +520,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(227,128,160,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '33':
@@ -534,7 +535,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(178,240,43,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '34':
@@ -549,7 +550,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(205,205,46,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '35':
@@ -564,7 +565,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(207,150,43,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '36':
@@ -579,7 +580,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(237,86,207,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '4':
@@ -594,7 +595,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(201,47,122,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '5':
@@ -609,7 +610,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(109,222,234,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '6':
@@ -624,7 +625,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(164,142,237,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '7':
@@ -639,7 +640,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(43,223,181,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '8':
@@ -654,7 +655,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(109,122,240,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '9':
@@ -669,7 +670,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(230,38,67,0.609)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
             }
@@ -679,7 +680,7 @@
         map.getPane('pane_Secteurdetravail_25kms_2').style['mix-blend-mode'] = 'multiply';
         var layer_Secteurdetravail_25kms_2 = new L.geoJson(json_Secteurdetravail_25kms_2, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_Secteurdetravail_25kms_2',
             layerName: 'layer_Secteurdetravail_25kms_2',
             pane: 'pane_Secteurdetravail_25kms_2',
@@ -942,7 +943,7 @@
                         lineJoin: 'round',
                         weight: 3.0,
                         fillOpacity: 0,
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case 'Limite de département':
@@ -955,7 +956,7 @@
                         lineJoin: 'bevel',
                         weight: 1.0,
                         fillOpacity: 0,
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case 'Limite de région':
@@ -968,7 +969,7 @@
                         lineJoin: 'bevel',
                         weight: 3.0,
                         fillOpacity: 0,
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
             }
@@ -978,7 +979,7 @@
         map.getPane('pane_LIMITESADMIN_5').style['mix-blend-mode'] = 'multiply';
         var layer_LIMITESADMIN_5 = new L.geoJson(json_LIMITESADMIN_5, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_LIMITESADMIN_5',
             layerName: 'layer_LIMITESADMIN_5',
             pane: 'pane_LIMITESADMIN_5',
@@ -1013,49 +1014,66 @@
                 </table>';
             layer.bindPopup(popupContent, { maxHeight: 400 });
         }
-
         function style_PREFECTURE_SOUSPREFECT_6_0(feature) {
-            switch (String(feature.properties['STATUT'])) {
-                case 'Préfecture de région':
-                    return {
-                        pane: 'pane_PREFECTURE_SOUSPREFECT_6',
-                        radius: 8.0,
-                        opacity: 1,
-                        color: 'rgba(128,17,25,0.722)',
-                        dashArray: '',
-                        lineCap: 'butt',
-                        lineJoin: 'miter',
-                        weight: 2.0,
-                        fill: true,
-                        fillOpacity: 1,
-                        fillColor: 'rgba(219,30,42,0.722)',
-                        interactive: true,
-                    }
-                    break;
-                case 'Préfectures':
-                    return {
-                        pane: 'pane_PREFECTURE_SOUSPREFECT_6',
-                        shape: 'square',
-                        radius: 5.6,
-                        stroke: false,
-                        fill: true,
-                        fillOpacity: 1,
-                        fillColor: 'rgba(248,122,12,0.722)',
-                        interactive: true,
-                    }
-                    break;
-                case 'Sous-préfecture':
-                    return {
-                        pane: 'pane_PREFECTURE_SOUSPREFECT_6',
-                        shape: 'square',
-                        radius: 3.6,
-                        stroke: false,
-                        fill: true,
-                        fillOpacity: 1,
-                        fillColor: 'rgba(241,22,227,0.722)',
-                        interactive: true,
-                    }
-                    break;
+            var context = {
+                feature: feature,
+                variables: {}
+            };
+            // Start of if blocks and style check logic
+            if (exp_PREFECTURE_SOUSPREFECT_6rule0_eval_expression(context)) {
+                return {
+                    pane: 'pane_PREFECTURE_SOUSPREFECT_6',
+                    radius: 8.0,
+                    opacity: 1,
+                    color: 'rgba(128,17,25,1.0)',
+                    dashArray: '',
+                    lineCap: 'butt',
+                    lineJoin: 'miter',
+                    weight: 2.0,
+                    fill: true,
+                    fillOpacity: 1,
+                    fillColor: 'rgba(219,30,42,1.0)',
+                    interactive: false,
+                };
+            }
+            else if (exp_PREFECTURE_SOUSPREFECT_6rule1_eval_expression(context)) {
+                return {
+                    pane: 'pane_PREFECTURE_SOUSPREFECT_6',
+                    shape: 'square',
+                    radius: 5.6,
+                    stroke: false,
+                    fill: true,
+                    fillOpacity: 1,
+                    fillColor: 'rgba(248,122,12,1.0)',
+                    interactive: false,
+                };
+            }
+            else if (exp_PREFECTURE_SOUSPREFECT_6rule2_eval_expression(context)) {
+                return {
+                    pane: 'pane_PREFECTURE_SOUSPREFECT_6',
+                    shape: 'square',
+                    radius: 3.6,
+                    stroke: false,
+                    fill: true,
+                    fillOpacity: 1,
+                    fillColor: 'rgba(241,22,227,1.0)',
+                    interactive: false,
+                };
+            }
+            else if (exp_PREFECTURE_SOUSPREFECT_6rule3_eval_expression(context)) {
+                return {
+                    pane: 'pane_PREFECTURE_SOUSPREFECT_6',
+                    shape: 'square',
+                    radius: 1.6,
+                    stroke: false,
+                    fill: true,
+                    fillOpacity: 1,
+                    fillColor: 'rgba(22,11,13,1.0)',
+                    interactive: false,
+                };
+            }
+            else {
+                return { fill: false, stroke: false };
             }
         }
         map.createPane('pane_PREFECTURE_SOUSPREFECT_6');
@@ -1063,7 +1081,7 @@
         map.getPane('pane_PREFECTURE_SOUSPREFECT_6').style['mix-blend-mode'] = 'normal';
         var layer_PREFECTURE_SOUSPREFECT_6 = new L.geoJson(json_PREFECTURE_SOUSPREFECT_6, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_PREFECTURE_SOUSPREFECT_6',
             layerName: 'layer_PREFECTURE_SOUSPREFECT_6',
             pane: 'pane_PREFECTURE_SOUSPREFECT_6',
@@ -1077,7 +1095,76 @@
             },
         });
         bounds_group.addLayer(layer_PREFECTURE_SOUSPREFECT_6);
-        function pop_POINTS_DE_LIVRAISON_7(feature, layer) {
+        function pop_Ponts_Tunnels_7(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['osm_id'] !== null ? autolinker.link(feature.properties['osm_id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(feature.properties['name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['oneway'] !== null ? autolinker.link(feature.properties['oneway'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['bridge'] !== null ? autolinker.link(feature.properties['bridge'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tunnel'] !== null ? autolinker.link(feature.properties['tunnel'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['maxspeed'] !== null ? autolinker.link(feature.properties['maxspeed'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(feature.properties['layer'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(feature.properties['path'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['code'] !== null ? autolinker.link(feature.properties['code'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fclass'] !== null ? autolinker.link(feature.properties['fclass'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['ref'] !== null ? autolinker.link(feature.properties['ref'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, { maxHeight: 400 });
+        }
+
+        function style_Ponts_Tunnels_7_0() {
+            return {
+                pane: 'pane_Ponts_Tunnels_7',
+                opacity: 1,
+                color: 'rgba(255,85,0,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Ponts_Tunnels_7');
+        map.getPane('pane_Ponts_Tunnels_7').style.zIndex = 407;
+        map.getPane('pane_Ponts_Tunnels_7').style['mix-blend-mode'] = 'normal';
+        var layer_Ponts_Tunnels_7 = new L.geoJson(json_Ponts_Tunnels_7, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Ponts_Tunnels_7',
+            layerName: 'layer_Ponts_Tunnels_7',
+            pane: 'pane_Ponts_Tunnels_7',
+            onEachFeature: pop_Ponts_Tunnels_7,
+            style: style_Ponts_Tunnels_7_0,
+        });
+        bounds_group.addLayer(layer_Ponts_Tunnels_7);
+        map.addLayer(layer_Ponts_Tunnels_7);
+        function pop_POINTS_DE_LIVRAISON_8(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
@@ -1098,11 +1185,11 @@
             layer.bindPopup(popupContent, { maxHeight: 400 });
         }
 
-        function style_POINTS_DE_LIVRAISON_7_0(feature) {
+        function style_POINTS_DE_LIVRAISON_8_0(feature) {
             switch (String(feature.properties['Semaine'])) {
                 case '01':
                     return {
-                        pane: 'pane_POINTS_DE_LIVRAISON_7',
+                        pane: 'pane_POINTS_DE_LIVRAISON_8',
                         radius: 5.2,
                         opacity: 1,
                         color: 'rgba(0,0,0,1.0)',
@@ -1118,7 +1205,7 @@
                     break;
                 case '02':
                     return {
-                        pane: 'pane_POINTS_DE_LIVRAISON_7',
+                        pane: 'pane_POINTS_DE_LIVRAISON_8',
                         radius: 5.2,
                         opacity: 1,
                         color: 'rgba(0,0,0,1.0)',
@@ -1134,7 +1221,7 @@
                     break;
                 case '03':
                     return {
-                        pane: 'pane_POINTS_DE_LIVRAISON_7',
+                        pane: 'pane_POINTS_DE_LIVRAISON_8',
                         radius: 5.2,
                         opacity: 1,
                         color: 'rgba(0,0,0,1.0)',
@@ -1150,32 +1237,32 @@
                     break;
             }
         }
-        map.createPane('pane_POINTS_DE_LIVRAISON_7');
-        map.getPane('pane_POINTS_DE_LIVRAISON_7').style.zIndex = 407;
-        map.getPane('pane_POINTS_DE_LIVRAISON_7').style['mix-blend-mode'] = 'normal';
-        var layer_POINTS_DE_LIVRAISON_7 = new L.geoJson(json_POINTS_DE_LIVRAISON_7, {
+        map.createPane('pane_POINTS_DE_LIVRAISON_8');
+        map.getPane('pane_POINTS_DE_LIVRAISON_8').style.zIndex = 408;
+        map.getPane('pane_POINTS_DE_LIVRAISON_8').style['mix-blend-mode'] = 'normal';
+        var layer_POINTS_DE_LIVRAISON_8 = new L.geoJson(json_POINTS_DE_LIVRAISON_8, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_POINTS_DE_LIVRAISON_7',
-            layerName: 'layer_POINTS_DE_LIVRAISON_7',
-            pane: 'pane_POINTS_DE_LIVRAISON_7',
-            onEachFeature: pop_POINTS_DE_LIVRAISON_7,
+            dataVar: 'json_POINTS_DE_LIVRAISON_8',
+            layerName: 'layer_POINTS_DE_LIVRAISON_8',
+            pane: 'pane_POINTS_DE_LIVRAISON_8',
+            onEachFeature: pop_POINTS_DE_LIVRAISON_8,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_POINTS_DE_LIVRAISON_7_0(feature));
+                return L.circleMarker(latlng, style_POINTS_DE_LIVRAISON_8_0(feature));
             },
         });
-        var cluster_POINTS_DE_LIVRAISON_7 = new L.MarkerClusterGroup({
+        var cluster_POINTS_DE_LIVRAISON_8 = new L.MarkerClusterGroup({
             showCoverageOnHover: false,
             spiderfyDistanceMultiplier: 2
         });
-        cluster_POINTS_DE_LIVRAISON_7.addLayer(layer_POINTS_DE_LIVRAISON_7);
+        cluster_POINTS_DE_LIVRAISON_8.addLayer(layer_POINTS_DE_LIVRAISON_8);
 
-        bounds_group.addLayer(layer_POINTS_DE_LIVRAISON_7);
-        cluster_POINTS_DE_LIVRAISON_7.addTo(map);
+        bounds_group.addLayer(layer_POINTS_DE_LIVRAISON_8);
+        cluster_POINTS_DE_LIVRAISON_8.addTo(map);
         map.on("zoomend", function (e) {
             if (map.getZoom() <= 19 && map.getZoom() >= 15) {
                 map.addLayer(layer_Fonddeplansatellite_0);
@@ -1202,10 +1289,10 @@
             } else if (map.getZoom() > 9 || map.getZoom() < 2) {
                 map.removeLayer(layer_LIMITESADMIN_5);
             }
-            if (map.getZoom() <= 15 && map.getZoom() >= 6) {
-                map.addLayer(layer_PREFECTURE_SOUSPREFECT_6);
-            } else if (map.getZoom() > 15 || map.getZoom() < 6) {
-                map.removeLayer(layer_PREFECTURE_SOUSPREFECT_6);
+            if (map.getZoom() <= 19 && map.getZoom() >= 13) {
+                map.addLayer(layer_Ponts_Tunnels_7);
+            } else if (map.getZoom() > 19 || map.getZoom() < 13) {
+                map.removeLayer(layer_Ponts_Tunnels_7);
             }
         });
         if (map.getZoom() <= 19 && map.getZoom() >= 15) {
@@ -1233,10 +1320,10 @@
         } else if (map.getZoom() > 9 || map.getZoom() < 2) {
             map.removeLayer(layer_LIMITESADMIN_5);
         }
-        if (map.getZoom() <= 15 && map.getZoom() >= 6) {
-            map.addLayer(layer_PREFECTURE_SOUSPREFECT_6);
-        } else if (map.getZoom() > 15 || map.getZoom() < 6) {
-            map.removeLayer(layer_PREFECTURE_SOUSPREFECT_6);
+        if (map.getZoom() <= 19 && map.getZoom() >= 13) {
+            map.addLayer(layer_Ponts_Tunnels_7);
+        } else if (map.getZoom() > 19 || map.getZoom() < 13) {
+            map.removeLayer(layer_Ponts_Tunnels_7);
         }
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
@@ -1249,7 +1336,7 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
             .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps, { 'POINTS_DE_LIVRAISON<br /><table><tr><td style="text-align: center;"><img src="legend/POINTS_DE_LIVRAISON_7_010.png" /></td><td>01</td></tr><tr><td style="text-align: center;"><img src="legend/POINTS_DE_LIVRAISON_7_021.png" /></td><td>02</td></tr><tr><td style="text-align: center;"><img src="legend/POINTS_DE_LIVRAISON_7_032.png" /></td><td>03</td></tr></table>': cluster_POINTS_DE_LIVRAISON_7, 'PREFECTURE_SOUS PREFECT<br /><table><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Préfecturederégion0.png" /></td><td>Préfecture de région</td></tr><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Préfecture1.png" /></td><td>Préfecture</td></tr><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Souspréfecture2.png" /></td><td>Sous-préfecture</td></tr></table>': layer_PREFECTURE_SOUSPREFECT_6, 'LIMITES ADMIN.<br /><table><tr><td style="text-align: center;"><img src="legend/LIMITESADMIN_5_Frontièreinternationale0.png" /></td><td>Frontière internationale</td></tr><tr><td style="text-align: center;"><img src="legend/LIMITESADMIN_5_Limitededépartement1.png" /></td><td>Limite de département</td></tr><tr><td style="text-align: center;"><img src="legend/LIMITESADMIN_5_Limitederégion2.png" /></td><td>Limite de région</td></tr></table>': layer_LIMITESADMIN_5, '<img src="legend/MaSocit_4.png" /> Ma Société': layer_MaSocit_4, 'Secteur de travail_100kms<br /><table><tr><td style="text-align: center; /></td><td></td></tr></table>': layer_Secteurdetravail_100kms_3, 'Secteur de travail_25kms<br /><table><tr><td style="text-align: center;" /></td><td></td></tr></table>': layer_Secteurdetravail_25kms_2, "Fond de plan carte": layer_Fonddeplancarte_1, "Fond de plan satellite": layer_Fonddeplansatellite_0, }).addTo(map);
+        L.control.layers(baseMaps, { 'POINTS_DE_LIVRAISON<br /><table><tr><td style="text-align: center;"><img src="legend/POINTS_DE_LIVRAISON_8_010.png" /></td><td>01</td></tr><tr><td style="text-align: center;"><img src="legend/POINTS_DE_LIVRAISON_8_021.png" /></td><td>02</td></tr><tr><td style="text-align: center;"><img src="legend/POINTS_DE_LIVRAISON_8_032.png" /></td><td>03</td></tr></table>': cluster_POINTS_DE_LIVRAISON_8, '<img src="legend/Ponts_Tunnels_7.png" /> Ponts_Tunnels': layer_Ponts_Tunnels_7, 'PREFECTURE_SOUS PREFECT<br /><table><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Préfecturederégion0.png" /></td><td>Préfecture de région</td></tr><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Préfecture1.png" /></td><td>Préfecture</td></tr><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Souspréfecture2.png" /></td><td>Sous-préfecture</td></tr><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Communesimple3.png" /></td><td>Commune simple</td></tr></table>': layer_PREFECTURE_SOUSPREFECT_6, 'LIMITES ADMIN.<br /><table><tr><td style="text-align: center;"><img src="legend/LIMITESADMIN_5_Frontièreinternationale0.png" /></td><td>Frontière internationale</td></tr><tr><td style="text-align: center;"><img src="legend/LIMITESADMIN_5_Limitededépartement1.png" /></td><td>Limite de département</td></tr><tr><td style="text-align: center;"><img src="legend/LIMITESADMIN_5_Limitederégion2.png" /></td><td>Limite de région</td></tr></table>': layer_LIMITESADMIN_5, '<img src="legend/MaSocit_4.png" /> Ma Société': layer_MaSocit_4, 'Secteur de travail_100kms<br /><table><tr><td style="text-align: center; /></td><td></td></tr></table>': layer_Secteurdetravail_100kms_3, 'Secteur de travail_25kms<br /><table><tr><td style="text-align: center;" /></td><td></td></tr></table>': layer_Secteurdetravail_25kms_2, "Fond de plan carte": layer_Fonddeplancarte_1, "Fond de plan satellite": layer_Fonddeplansatellite_0, }).addTo(map);
         setBounds();
         var i = 0;
         layer_MaSocit_4.eachLayer(function (layer) {
