@@ -55,7 +55,7 @@
     <script>
         var map = L.map('map', {
             zoomControl: true, maxZoom: 28, minZoom: 1
-        }).fitBounds([[43.143592174415666, -4.178123667723982], [47.91737548127744, 5.040950792508445]]);
+        }).fitBounds([[42.94948821985884, -3.378919440168244], [47.721884353139565, 6.223504196112669]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://www.cartogis.fr/" target="_blank">CARTOGIS</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org"></a>');
         var autolinker = new Autolinker({ truncate: { length: 30, location: 'smart' } });
@@ -90,10 +90,10 @@
         map.addLayer(layer_Fonddeplansatellite_0);
         map.createPane('pane_Fonddeplancarte_1');
         map.getPane('pane_Fonddeplancarte_1').style.zIndex = 401;
-        var layer_Fonddeplancarte_1 = L.tileLayer('http://tile-b.openstreetmap.fr/hot/{z}/{x}/{y}.png, http://tile-a.openstreetmap.fr/hot/{z}/{x}/{y}.png, http://tile-c.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+        var layer_Fonddeplancarte_1 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             pane: 'pane_Fonddeplancarte_1',
             opacity: 1.0,
-            attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
+            attribution: '',
             minZoom: 1,
             maxZoom: 28,
             minNativeZoom: 0,
@@ -688,6 +688,7 @@
             style: style_Secteurdetravail_25kms_2_0,
         });
         bounds_group.addLayer(layer_Secteurdetravail_25kms_2);
+        map.addLayer(layer_Secteurdetravail_25kms_2);
         function pop_Secteurdetravail_100kms_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -717,7 +718,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(86,237,232,0.6)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '2':
@@ -732,7 +733,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(207,47,49,0.6)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '3':
@@ -747,7 +748,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(162,89,74,0.6)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '4':
@@ -762,7 +763,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(109,221,29,0.6)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '5':
@@ -777,7 +778,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(41,248,197,0.6)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '6':
@@ -792,7 +793,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(42,165,38,0.6)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '7':
@@ -807,7 +808,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(221,33,234,0.6)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '8':
@@ -822,7 +823,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(127,154,86,0.6)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 case '9':
@@ -837,7 +838,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(99,186,229,0.6)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
                 default:
@@ -852,7 +853,7 @@
                         fill: true,
                         fillOpacity: 1,
                         fillColor: 'rgba(227,239,47,0.6)',
-                        interactive: true,
+                        interactive: false,
                     }
                     break;
             }
@@ -862,7 +863,7 @@
         map.getPane('pane_Secteurdetravail_100kms_3').style['mix-blend-mode'] = 'multiply';
         var layer_Secteurdetravail_100kms_3 = new L.geoJson(json_Secteurdetravail_100kms_3, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_Secteurdetravail_100kms_3',
             layerName: 'layer_Secteurdetravail_100kms_3',
             pane: 'pane_Secteurdetravail_100kms_3',
@@ -878,6 +879,9 @@
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Secteur'] !== null ? autolinker.link(feature.properties['Secteur'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, { maxHeight: 400 });
@@ -1000,10 +1004,10 @@
                         <td colspan="2">' + (feature.properties['INSEE_COMM'] !== null ? autolinker.link(feature.properties['INSEE_COMM'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['POPULATION'] !== null ? autolinker.link(feature.properties['POPULATION'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>POPULATION</strong><br />' + (feature.properties['POPULATION'] !== null ? autolinker.link(feature.properties['POPULATION'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['SUPERFICIE'] !== null ? autolinker.link(feature.properties['SUPERFICIE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>SUPERFICIE</strong><br />' + (feature.properties['SUPERFICIE'] !== null ? autolinker.link(feature.properties['SUPERFICIE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['STATUT'] !== null ? autolinker.link(feature.properties['STATUT'].toLocaleString()) : '') + '</td>\
@@ -1023,6 +1027,7 @@
             if (exp_PREFECTURE_SOUSPREFECT_6rule0_eval_expression(context)) {
                 return {
                     pane: 'pane_PREFECTURE_SOUSPREFECT_6',
+                    shape: 'triangle',
                     radius: 8.0,
                     opacity: 1,
                     color: 'rgba(128,17,25,1.0)',
@@ -1040,7 +1045,7 @@
                 return {
                     pane: 'pane_PREFECTURE_SOUSPREFECT_6',
                     shape: 'square',
-                    radius: 5.6,
+                    radius: 3.9999999999999987,
                     stroke: false,
                     fill: true,
                     fillOpacity: 1,
@@ -1052,23 +1057,11 @@
                 return {
                     pane: 'pane_PREFECTURE_SOUSPREFECT_6',
                     shape: 'square',
-                    radius: 3.6,
+                    radius: 2.4000000000000004,
                     stroke: false,
                     fill: true,
                     fillOpacity: 1,
                     fillColor: 'rgba(241,22,227,1.0)',
-                    interactive: false,
-                };
-            }
-            else if (exp_PREFECTURE_SOUSPREFECT_6rule3_eval_expression(context)) {
-                return {
-                    pane: 'pane_PREFECTURE_SOUSPREFECT_6',
-                    shape: 'square',
-                    radius: 1.6,
-                    stroke: false,
-                    fill: true,
-                    fillOpacity: 1,
-                    fillColor: 'rgba(22,11,13,1.0)',
                     interactive: false,
                 };
             }
@@ -1095,6 +1088,7 @@
             },
         });
         bounds_group.addLayer(layer_PREFECTURE_SOUSPREFECT_6);
+        map.addLayer(layer_PREFECTURE_SOUSPREFECT_6);
         function pop_Ponts_Tunnels_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -1117,12 +1111,6 @@
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['maxspeed'] !== null ? autolinker.link(feature.properties['maxspeed'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['layer'] !== null ? autolinker.link(feature.properties['layer'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['path'] !== null ? autolinker.link(feature.properties['path'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['code'] !== null ? autolinker.link(feature.properties['code'].toLocaleString()) : '') + '</td>\
@@ -1289,6 +1277,11 @@
             } else if (map.getZoom() > 9 || map.getZoom() < 2) {
                 map.removeLayer(layer_LIMITESADMIN_5);
             }
+            if (map.getZoom() <= 16 && map.getZoom() >= 5) {
+                map.addLayer(layer_PREFECTURE_SOUSPREFECT_6);
+            } else if (map.getZoom() > 16 || map.getZoom() < 5) {
+                map.removeLayer(layer_PREFECTURE_SOUSPREFECT_6);
+            }
             if (map.getZoom() <= 19 && map.getZoom() >= 13) {
                 map.addLayer(layer_Ponts_Tunnels_7);
             } else if (map.getZoom() > 19 || map.getZoom() < 13) {
@@ -1320,6 +1313,11 @@
         } else if (map.getZoom() > 9 || map.getZoom() < 2) {
             map.removeLayer(layer_LIMITESADMIN_5);
         }
+        if (map.getZoom() <= 16 && map.getZoom() >= 5) {
+            map.addLayer(layer_PREFECTURE_SOUSPREFECT_6);
+        } else if (map.getZoom() > 16 || map.getZoom() < 5) {
+            map.removeLayer(layer_PREFECTURE_SOUSPREFECT_6);
+        }
         if (map.getZoom() <= 19 && map.getZoom() >= 13) {
             map.addLayer(layer_Ponts_Tunnels_7);
         } else if (map.getZoom() > 19 || map.getZoom() < 13) {
@@ -1336,7 +1334,7 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
             .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps, { 'POINTS_DE_LIVRAISON<br /><table><tr><td style="text-align: center;"><img src="legend/POINTS_DE_LIVRAISON_8_010.png" /></td><td>01</td></tr><tr><td style="text-align: center;"><img src="legend/POINTS_DE_LIVRAISON_8_021.png" /></td><td>02</td></tr><tr><td style="text-align: center;"><img src="legend/POINTS_DE_LIVRAISON_8_032.png" /></td><td>03</td></tr></table>': cluster_POINTS_DE_LIVRAISON_8, '<img src="legend/Ponts_Tunnels_7.png" /> Ponts_Tunnels': layer_Ponts_Tunnels_7, 'PREFECTURE_SOUS PREFECT<br /><table><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Préfecturederégion0.png" /></td><td>Préfecture de région</td></tr><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Préfecture1.png" /></td><td>Préfecture</td></tr><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Souspréfecture2.png" /></td><td>Sous-préfecture</td></tr><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Communesimple3.png" /></td><td>Commune simple</td></tr></table>': layer_PREFECTURE_SOUSPREFECT_6, 'LIMITES ADMIN.<br /><table><tr><td style="text-align: center;"><img src="legend/LIMITESADMIN_5_Frontièreinternationale0.png" /></td><td>Frontière internationale</td></tr><tr><td style="text-align: center;"><img src="legend/LIMITESADMIN_5_Limitededépartement1.png" /></td><td>Limite de département</td></tr><tr><td style="text-align: center;"><img src="legend/LIMITESADMIN_5_Limitederégion2.png" /></td><td>Limite de région</td></tr></table>': layer_LIMITESADMIN_5, '<img src="legend/MaSocit_4.png" /> Ma Société': layer_MaSocit_4, 'Secteur de travail_100kms<br /><table><tr><td style="text-align: center; /></td><td></td></tr></table>': layer_Secteurdetravail_100kms_3, 'Secteur de travail_25kms<br /><table><tr><td style="text-align: center;" /></td><td></td></tr></table>': layer_Secteurdetravail_25kms_2, "Fond de plan carte": layer_Fonddeplancarte_1, "Fond de plan satellite": layer_Fonddeplansatellite_0, }).addTo(map);
+        L.control.layers(baseMaps, { 'POINTS_DE_LIVRAISON<br /><table><tr><td style="text-align: center;"><img src="legend/POINTS_DE_LIVRAISON_8_010.png" /></td><td>01</td></tr><tr><td style="text-align: center;"><img src="legend/POINTS_DE_LIVRAISON_8_021.png" /></td><td>02</td></tr><tr><td style="text-align: center;"><img src="legend/POINTS_DE_LIVRAISON_8_032.png" /></td><td>03</td></tr></table>': cluster_POINTS_DE_LIVRAISON_8, '<img src="legend/Ponts_Tunnels_7.png" /> Ponts_Tunnels': layer_Ponts_Tunnels_7, 'PREFECTURE_SOUS PREFECT<br /><table><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Préfecturederégion0.png" /></td><td>Préfecture de région</td></tr><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Préfecture1.png" /></td><td>Préfecture</td></tr><tr><td style="text-align: center;"><img src="legend/PREFECTURE_SOUSPREFECT_6_Souspréfecture2.png" /></td><td>Sous-préfecture</td></tr></table>': layer_PREFECTURE_SOUSPREFECT_6, 'LIMITES ADMIN.<br /><table><tr><td style="text-align: center;"><img src="legend/LIMITESADMIN_5_Frontièreinternationale0.png" /></td><td>Frontière internationale</td></tr><tr><td style="text-align: center;"><img src="legend/LIMITESADMIN_5_Limitededépartement1.png" /></td><td>Limite de département</td></tr><tr><td style="text-align: center;"><img src="legend/LIMITESADMIN_5_Limitederégion2.png" /></td><td>Limite de région</td></tr></table>': layer_LIMITESADMIN_5, '<img src="legend/MaSocit_4.png" /> Ma Société': layer_MaSocit_4, 'Secteur de travail_100kms<br /><table><tr><td style="text-align: center; /></td><td></td></tr></table>': layer_Secteurdetravail_100kms_3, 'Secteur de travail_25kms<br /><table><tr><td style="text-align: center;/></td><td>9</td></tr></table>': layer_Secteurdetravail_25kms_2, "Fond de plan carte": layer_Fonddeplancarte_1, "Fond de plan satellite": layer_Fonddeplansatellite_0, }).addTo(map);
         setBounds();
         var i = 0;
         layer_MaSocit_4.eachLayer(function (layer) {
@@ -1344,7 +1342,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['Secteur'] !== null ? String('<div style="color: #0c25f3; font-size: 10pt; font-weight: bold; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['Secteur']) + '</div>' : ''), { permanent: true, offset: [-0, -16], className: 'css_MaSocit_4' });
+            layer.bindTooltip((layer.feature.properties['Secteur'] !== null ? String('<div style="color: #000000; font-size: 10pt; font-weight: bold; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['Secteur']) + '</div>' : ''), { permanent: true, offset: [-0, -16], className: 'css_MaSocit_4' });
             labels.push(layer);
             totalMarkers += 1;
             layer.added = true;

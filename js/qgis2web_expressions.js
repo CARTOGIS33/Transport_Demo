@@ -794,16 +794,3 @@ function exp_PREFECTURE_SOUSPREFECT_6rule2_eval_expression(context) {
         return (feature['STATUT']  == 'Sous-préfecture');
     }
 }
-
-
-function exp_PREFECTURE_SOUSPREFECT_6rule3_eval_expression(context) {
-    // STATUT = 'Commune simple'
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return (feature.properties['STATUT']  == 'Commune simple');
-    } else {
-        return (feature['STATUT']  == 'Commune simple');
-    }
-}
